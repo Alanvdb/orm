@@ -1,0 +1,18 @@
+{
+    "name": "alanvdb/orm",
+    "description": "Entity collection using Doctrine ORM",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AlanVdb\\ORM\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alanvdb",
+            "email": "alanvdb.coder@gmail.com"
+        }
+    ],
+    "require": {}
+}
