@@ -2,7 +2,7 @@
 
 namespace AlanVdb\ORM\Manager\Definition;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 interface EntityManagerFactoryInterface
 {
@@ -12,5 +12,5 @@ interface EntityManagerFactoryInterface
         string $proxyDirectory,
         string $proxyNamespace,
         bool   $devMode = true
-    ) : EntityManager;
+    ) : EntityManagerInterface;
 }

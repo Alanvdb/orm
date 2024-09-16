@@ -3,6 +3,8 @@
 namespace AlanVdb\ORM\Manager\Factory;
 
 use AlanVdb\ORM\Manager\Definition\EntityManagerFactoryInterface;
+use Doctrine\ORM\EntityManagerInterface;
+
 use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\Driver\AttributeDriver;
@@ -11,7 +13,7 @@ use Doctrine\DBAL\DriverManager;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 use Symfony\Component\Cache\Adapter\PhpFilesAdapter;
 
-class EntityManagerFactory implements EntityManagerFactoryInterface
+class DoctrineEntityManagerFactory implements EntityManagerFactoryInterface
 {
     /**
      * @param string[] $dbParams Database configuration
@@ -32,7 +34,7 @@ class EntityManagerFactory implements EntityManagerFactoryInterface
         string $proxyDirectory,
         string $proxyNamespace,
         bool   $devMode = true
-    ) : EntityManager {
+    ) : EntityManagerInterface {
         
         if ($devMode) {
             $queryCache    = new ArrayAdapter();
